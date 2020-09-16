@@ -3,15 +3,17 @@
 }
 html,
 body{
-    margin: 0;
+    margin: 0.2rem;
     padding: 0;
+    background-color: black;
 }
 .mainIntro{
-    background-image: url("./img/background11.jpg");
+    background-image: url("./img/background2.jpg");
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain; 
 }
+a{text-decoration: none;color: white;}
 
  .nav{
     background: rgba(255, 255, 255, 0.1);
@@ -25,26 +27,28 @@ body{
  .nav a{
     display: block;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2em;
     padding: 1rem;
-    color: black;
+    color: #076483;
     
 }
+.openBtn{font-size: 50px; cursor: pointer; color: #076483;}
 .closeBtn{
     position: absolute;
     left: 7rem;
     transition: visibility 2s ease-in;
+    font-size: 50px;
 }
 
 .about{
     color: white;
 }
 .intro{
-    color: white;
+    color: black;
     font-family: 'Grandstander', cursive;
 }
 .intro2{
-    background-color: #00bfff;
+    background-color: #076483;
     border-radius: 10px;
     text-align: center;
     font-family: 'Volkhov', serif;
@@ -53,9 +57,11 @@ body{
 .about-me {
     text-align: center;   
 }
-h2{
+h2,
+h3{
     font-family: 'Grandstander', cursive;
     text-align: center;
+    color: white;
 }
 .profile{
     width: 200px;
@@ -65,29 +71,50 @@ h2{
     background-size: contain;
     margin: auto;  
 }
+p{color: white; font-family:'Grandstander', cursive; ;}
 .icon{
     text-align: center;
 }
+.column{
+  background-color: #076483;
+  margin: 2rem;
+  padding: 0.5rem;
+  outline: black dotted;
+}
+.work{
+  text-align: center;
+}
 .work img{
     border-radius: 20px;
-    width: 50%;
-
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s ease;
 }
 
+.work a {
+  text-decoration: none;
+}
+.work a h3{
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center;
+  font-size: 150%;
+  left: 50%;
+  right: 50%; 
+}
+.work:hover img{
+  opacity: 0.2;
+}
+.work:hover h3{
+  opacity: 1;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Media queries for larger screens */
+@media screen and (min-width:500px){
+.row{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 
 /* Animations for intro */
 .tracking-in-contract-bck-top {
@@ -165,3 +192,63 @@ h2{
     }
   }
   
+
+  /* Animations for link */
+  .vibrate-1 {
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+            animation: vibrate-1 0.3s linear infinite both;
+  }
+
+  
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}

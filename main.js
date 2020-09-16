@@ -4,7 +4,6 @@ function openNav(){
     document.querySelector('.about').style.visibility = 'hidden';
     document.querySelector('.about').style.transition = ' hidden 0s';
     
-    
 }
 
 function closeNav(){
