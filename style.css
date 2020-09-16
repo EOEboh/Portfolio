@@ -38,12 +38,11 @@ a{text-decoration: none;color: white;}
     left: 7rem;
     transition: visibility 2s ease-in;
     font-size: 50px;
+    background-color: white;
+    border-radius: 50%;
 }
 
-.about{
-    color: white;
-}
-.intro{
+.intro h2{
     color: black;
     font-family: 'Grandstander', cursive;
 }
@@ -95,7 +94,7 @@ p{color: white; font-family:'Grandstander', cursive; ;}
   text-decoration: none;
 }
 .work a h3{
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   text-align: center;
   font-size: 150%;
@@ -109,11 +108,29 @@ p{color: white; font-family:'Grandstander', cursive; ;}
   opacity: 1;
 }
 
+/* Portfolio page */
+.row-1{
+  background-color: #076483;
+  padding: 1rem;
+}
+.work-1{text-align: center;}
+.work-1 img{
+  width: 50%;
+}
+
 /* Media queries for larger screens */
-@media screen and (min-width:500px){
+@media screen and (min-width:498px){
 .row{
   display: grid;
   grid-template-columns: auto auto auto auto;
+}
+}
+
+@media screen and (min-width:1024px){
+  .row{
+    display: grid;
+    grid-template-columns: auto auto auto  ;
+  }
 }
 
 /* Animations for intro */
@@ -193,7 +210,7 @@ p{color: white; font-family:'Grandstander', cursive; ;}
   }
   
 
-  /* Animations for link */
+  /* Animations for link vibration */
   .vibrate-1 {
     -webkit-animation: vibrate-1 0.3s linear infinite both;
             animation: vibrate-1 0.3s linear infinite both;
