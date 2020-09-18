@@ -9,7 +9,7 @@ body{
 }
 .mainIntro{
     background-image: url("./img/background2.jpg");
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
 }
@@ -70,10 +70,8 @@ h3{
     background-size: contain;
     margin: auto;  
 }
-p{color: white; font-family:'Grandstander', cursive; ;}
-.icon{
-    text-align: center;
-}
+p{color: white; font-family:'Grandstander', cursive; }
+
 .column{
   background-color: #076483;
   margin: 2rem;
@@ -118,7 +116,11 @@ input, textarea{
   margin: 8px;
 }
 input{padding: 5px;}
-textarea{border-radius: 20px; box-shadow: 5px 5px 5px #000000;}
+textarea{
+  border-radius: 20px;
+   box-shadow: 5px 5px 5px #000000;
+   outline: none;
+}
 textarea::placeholder{text-align: center;}
 button{
   padding: 2px; 
@@ -144,12 +146,13 @@ button{
   width: 50%;
 }
 
+
 /* Media queries for larger screens */
 @media screen and (min-width:498px){
 .row{
   display: grid;
   grid-template-columns: auto auto auto auto;
-}
+  }
 }
 
 @media screen and (min-width:1024px){
@@ -157,6 +160,25 @@ button{
     display: grid;
     grid-template-columns: auto auto auto;
   }
+  
+.nav {
+  display: flex;
+  overflow: visible;
+  height: fit-content;
+  
+}
+.nav a{
+  font-size: 300;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav .closeBtn{display: none;}
+.openBtn{visibility: hidden;}
+
+/* portfolio page */
+pre{font-size: 2em;}
+
   
 }
 
