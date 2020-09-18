@@ -108,6 +108,32 @@ p{color: white; font-family:'Grandstander', cursive; ;}
   opacity: 1;
 }
 
+/* Form Styling */
+.contact-form{
+  background-color: #076483;
+  text-align: center; 
+}
+input, textarea{
+  width: 50%;
+  margin: 8px;
+}
+input{padding: 5px;}
+textarea{border-radius: 20px; box-shadow: 5px 5px 5px #000000;}
+textarea::placeholder{text-align: center;}
+button{
+  padding: 2px; 
+  width: 80px; 
+  background-color: black;
+  outline: none;
+  border-radius: 20px;
+}
+
+/* fontawesome styling */
+.fa-github{color: #fff;}
+.fa-linkedin{color: #1bb4f0;}
+
+
+
 /* Portfolio page */
 .row-1{
   background-color: #076483;
@@ -129,8 +155,9 @@ p{color: white; font-family:'Grandstander', cursive; ;}
 @media screen and (min-width:1024px){
   .row{
     display: grid;
-    grid-template-columns: auto auto auto  ;
+    grid-template-columns: auto auto auto;
   }
+  
 }
 
 /* Animations for intro */
