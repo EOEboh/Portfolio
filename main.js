@@ -12,3 +12,7 @@ function closeNav(){
     document.querySelector('.about').style.visibility= 'visible';
 
 }
+// Footer date
+ var d = document.getElementById('d');
+var date = new Date().getFullYear();
+d.innerText = date;
